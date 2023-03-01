@@ -1,17 +1,12 @@
 const express = require('express')
-
 const router = express.Router()
 
-router.get('/', (req,res)=>{
-  res.send('Pagina de clientes')
-})
+const clientsController = require('../controllers/clients')
 
-router.get('/lists', (req, res)=>{
-  res.send('Pagina de lista de clientes')
-})
+router.get('/', clientsController.clients)
 
-router.get('/new',(req, res)=>{
-  res.send('Pagina de cadastro de clientes')
-})
+router.get('/lists',clientsController.list)
+
+router.get('/new',clientsController.novo)
 
 module.exports = router
