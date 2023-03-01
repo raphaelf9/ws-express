@@ -1,5 +1,8 @@
 const main = (req,res)=>{
-  res.send('Bem vindo a página principal!')
+  res.render('home',{
+    time: new Date().toUTCString()
+  })
+  
 }
 
 const p1 = (req,res)=>{
