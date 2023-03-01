@@ -10,6 +10,16 @@ const calc = (req, res)=>{
   }
 }
 
+const isPar = (req,res)=>{
+  const number = (req.params.num % 2) === 0
+  if(number){
+    res.send('Numero par')
+  }else{
+    res.send('Numero impar')
+  }
+}
+
 module.exports = {
-  calc
+  calc,
+  isPar
 }
