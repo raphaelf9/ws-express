@@ -1,5 +1,5 @@
 const main = (req,res)=>{
-  res.send('Estamos online')
+  res.send('Bem vindo a página principal!')
 }
 
 const p1 = (req,res)=>{
